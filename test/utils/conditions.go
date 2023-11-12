@@ -44,13 +44,7 @@ func PodRunningReady(p *v1.Pod) (bool, error) {
 	return true, nil
 }
 
-func PodRunningReadyOrSucceeded(p *v1.Pod) (bool, error) {
-	// Check if the phase is succeeded.
-	if p.Status.Phase == v1.PodSucceeded {
-		return true, nil
-	}
-	return PodRunningReady(p)
-}
+
 
 func PodSucceeded(p *v1.Pod) (bool, error) {
 	return p.Status.Phase == v1.PodSucceeded, nil
