@@ -39,7 +39,7 @@ const (
 	retryBackoffInitialDuration = 100 * time.Millisecond
 	retryBackoffFactor          = 3
 	retryBackoffJitter          = 0
-	retryBackoffSteps           = 6
+	retryBackoffSteps           = 60
 )
 
 // Utility for retrying the given function with exponential backoff.
